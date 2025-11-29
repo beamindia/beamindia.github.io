@@ -1,11 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BEAMINDIA - MY ROBOTS - FIRE - MISCELLANEOUS</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - FIRE - MISCELLANEOUS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
         :root { --accent: #20c997; }
 
         a { color: var(--accent); }
@@ -20,36 +23,45 @@
             margin-bottom: .5rem;
         }
     </style>
-<link href="assets/style.css" rel="stylesheet">
-<link href="assets/navbar.css" rel="stylesheet">
-<link href="assets/robot-nav.css" rel="stylesheet">
-<link href="assets/fire-subnav.css" rel="stylesheet">
+
+    <link href="assets/style.css" rel="stylesheet"/>
+    <link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+<link href="assets/fire-subnav.css" rel="stylesheet"/>
 </head>
+
 <body class="bg-white text-dark">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"><div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
             <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
                     <li class="nav-item"><a class="nav-link" href="basicbeam.html">BEAM</a></li>
                     <li class="nav-item"><a class="nav-link" href="se.html">Solar Engine</a></li>
                     <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
                     <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 </ul>
-</div>
+            </div>
         </div>
-    </nav><main class="container my-5"><!-- SUBNAV --><div class="nav-wrapper overflow-auto">
-            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav" id="robot-subnav" style="min-width:480px;">
-<li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
+            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav"
+                id="robot-subnav" style="min-width:480px;">
+                <li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
             </ul>
-</div>
+        </div>
 
         <!-- SECTION MENU -->
         <div class="fire-subnav">
@@ -59,7 +71,7 @@
         <!-- REFERENCES -->
         <h3 class="section-heading">References</h3>
         <ul>
-<li>THE 8051 MICROCONTROLLER AND EMBEDDED SYSTEMS – Muhammad Ali Mazidi, Janice Gillispie Mazidi</li>
+            <li>THE 8051 MICROCONTROLLER AND EMBEDDED SYSTEMS – Muhammad Ali Mazidi, Janice Gillispie Mazidi</li>
             <li>The 8051 Microcontroller Architecture, Programming and Applications – Kenneth Ayala</li>
             <li>Nervous Networks: Processes and Transitions – Wilf Righter  
                 <a href="http://www.solarbotics.net/wilf/NewNvCircuits.htm" target="_blank">http://www.solarbotics.net/wilf/NewNvCircuits.htm</a>
@@ -72,12 +84,14 @@
             </li>
             <li>BEAM Yahoo Mailing List</li>
         </ul>
-<!-- FINAL WORDS --><h3 class="section-heading">Final words</h3>
+
+        <!-- FINAL WORDS -->
+        <h3 class="section-heading">Final words</h3>
 
         <p>FIRE has many flaws which needs to be fixed:</p>
 
         <ol>
-<li>There are no sensors at the back. This has been a major disadvantage considering the size of the robot, and it struggles to get out of room corners.</li>
+            <li>There are no sensors at the back. This has been a major disadvantage considering the size of the robot, and it struggles to get out of room corners.</li>
             <li>There is no protection for the circuit boards from pointed obstacles.</li>
             <li>The L298 motor driver is inefficient. I should have used the LMD18298 instead.</li>
             <li>
@@ -93,14 +107,21 @@
                 using FM and DTMF. With these additions, the robot will finally feel complete—sometime in the future.
             </li>
         </ol>
-<!-- CREDITS --><h3 class="section-heading">Credits</h3>
+
+        <!-- CREDITS -->
+        <h3 class="section-heading">Credits</h3>
 
         <p>
            Thanks to Wilf Righter, Sathe Dilip, Bruce Robinson, Frans Storms, Uditha de Alwis, Domenico Mancini, and everyone on the BEAM mailing list for their input during this project.
            Also thanks to Arjun and Krishna, my project partners, and to Varoun for lending his digital camera for the photos.
         </p>
 
-    </main><footer class="bg-white text-center py-4 mt-5 small text-muted border-top"><p>© Viswas Nair TK</p>
-    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

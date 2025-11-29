@@ -1,11 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BEAMINDIA - MY ROBOTS - FIRE - MICROCONTROLLER</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - FIRE - MICROCONTROLLER</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
         :root { --accent: #20c997; }
         a { color: var(--accent); }
         .text-accent { color: var(--accent)!important; }
@@ -31,38 +34,46 @@
             white-space: pre;
         }
     </style>
-<link href="assets/style.css" rel="stylesheet">
-<link href="assets/navbar.css" rel="stylesheet">
-<link href="assets/robot-nav.css" rel="stylesheet">
-<link href="assets/fire-subnav.css" rel="stylesheet">
+
+    <link href="assets/style.css" rel="stylesheet" />
+    <link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+<link href="assets/fire-subnav.css" rel="stylesheet"/>
 </head>
 <body class="bg-white text-dark">
 
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"><div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
             <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link active" href="index.html">Robots</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.html">Robots</a></li>
                 <li class="nav-item"><a class="nav-link" href="basicbeam.html">BEAM</a></li>
                 <li class="nav-item"><a class="nav-link" href="se.html">Solar Engine</a></li>
                 <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
                 <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 </ul>
-</div>
+            </div>
         </div>
-    </nav><main class="container my-5"><!-- ROBOT SUBNAV --><div class="nav-wrapper overflow-auto">
-            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav" id="robot-subnav" style="min-width: 480px;">
-<li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- ROBOT SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
+            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav"
+                id="robot-subnav" style="min-width: 480px;">
+                <li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
             </ul>
-</div>
+        </div>
 
         <!-- SECTION MENU -->
         <div class="fire-subnav">
@@ -105,7 +116,7 @@
         <!-- AT89S8252 SPECIFICATIONS -->
         <h3 class="section-heading">Atmel AT89S8252 specifications</h3>
         <ul>
-<li>Compatible with MCS-51™ products</li>
+            <li>Compatible with MCS-51™ products</li>
             <li>8 KB in-system reprogrammable flash memory (SPI interface, 1,000 write/erase endurance)</li>
             <li>2 KB EEPROM (100,000 write/erase endurance)</li>
             <li>Operates from 4.0 V to 6.0 V</li>
@@ -123,15 +134,19 @@
             <li>Dual data pointer</li>
             <li>Power-off flag</li>
         </ul>
-<p>
-            Download Data sheet <a href="AT89S8252%20data%20sheet.pdf">here</a>
+
+        <p>
+            Download Data sheet <a href="AT89S8252 data sheet.pdf">here</a>
         </p>
 
         <!-- PIN CONFIGURATION -->
         <h3 class="section-heading">Pin configuration AT89S8252</h3>
 
         <p>
-            <img src="images/FIRE/Microcontroller/micro.GIF" alt="AT89S8252 pin configuration" width="325" height="402" border="3"></p>
+            <img src="images/FIRE/Microcontroller/micro.GIF"
+                 alt="AT89S8252 pin configuration"
+                 width="325" height="402" border="3" />
+        </p>
 
         <!-- PORTS -->
         <h3 class="section-heading">Ports</h3>
@@ -180,34 +195,36 @@
         </p>
 
         <ol>
-<li>Start.</li>
+            <li>Start.</li>
             <li>Camera faces forward (manual control).</li>
             <li>Move forward — both motors running forward.</li>
             <li>Continuously scan Port 3 for obstacle interrupts.</li>
             <li>If the left IR interrupt (IRTL) is triggered, perform a right-side avoidance sequence:
                 <ul>
-<li>Stop both motors.</li>
+                    <li>Stop both motors.</li>
                     <li>Rotate the camera 180° to face backward.</li>
                     <li>Reverse for 3 seconds.</li>
                     <li>Rotate the camera 225° to face northeast.</li>
                     <li>Turn right: right motor stops, left motor runs at high speed for 2 seconds.</li>
                     <li>Rotate camera back to face forward.</li>
                 </ul>
-</li>
+            </li>
             <li>If the right IR interrupt (IRTR) is triggered, perform a left-side avoidance sequence:
                 <ul>
-<li>Stop both motors.</li>
+                    <li>Stop both motors.</li>
                     <li>Rotate the camera 180° to face backward.</li>
                     <li>Reverse for 3 seconds.</li>
                     <li>Rotate the camera 135° to face northwest.</li>
                     <li>Turn left: left motor stops, right motor runs at high speed for 2 seconds.</li>
                     <li>Rotate camera back to face forward.</li>
                 </ul>
-</li>
+            </li>
             <li>If no interrupt is triggered, continue forward motion.</li>
             <li>End.</li>
         </ol>
-<!-- CODE --><h3 class="section-heading">Code</h3>
+
+        <!-- CODE -->
+        <h3 class="section-heading">Code</h3>
 
         <pre class="code-box">
         ORG 0000H
@@ -313,16 +330,28 @@ RIGHTOB MOV IE,00H    ;Disable All Interrupts
         <!-- CIRCUIT -->
         <h3 class="section-heading">Circuit</h3>
         <p>
-            <img src="images/FIRE/Microcontroller/mckt.GIF" alt="Microcontroller circuit" width="444" height="384" border="3"></p>
+            <img src="images/FIRE/Microcontroller/mckt.GIF"
+                 alt="Microcontroller circuit"
+                 width="444" height="384" border="3"/>
+        </p>
 
         <!-- IMAGES -->
         <h3 class="section-heading">Images</h3>
         <p>
-            <img src="images/FIRE/Microcontroller/FIRE05.JPG" alt="Programmer and Microcontroller board" width="500" height="465" border="3"></p>
+            <img src="images/FIRE/Microcontroller/FIRE05.JPG"
+                 alt="Programmer and Microcontroller board"
+                 width="500" height="465" border="3"/>
+        </p>
         <p>(Top: Programmer, Bottom: Microcontroller board)</p>
 
-    </main><footer class="bg-white text-center py-4 mt-5 small text-muted border-top"><p>© Viswas Nair TK</p>
-    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script>
+    </main>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
     function copyCode(id) {
         const el = document.getElementById(id);
         navigator.clipboard.writeText(el.innerText).then(() => {
@@ -330,5 +359,6 @@ RIGHTOB MOV IE,00H    ;Disable All Interrupts
         });
     }
     </script>
+
 </body>
 </html>

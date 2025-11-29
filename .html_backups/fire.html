@@ -1,11 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BEAMINDIA - MY ROBOTS - FIRE</title>
-<!-- Bootstrap --><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - FIRE</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
 :root {
             --accent: #20c997;
         }
@@ -98,40 +103,52 @@
             margin: 0;
         }
 </style>
-<link href="assets/style.css" rel="stylesheet">
-<link href="assets/navbar.css" rel="stylesheet">
-<link href="assets/robot-nav.css" rel="stylesheet">
-<link href="assets/fire-subnav.css" rel="stylesheet">
+
+    <link href="assets/style.css" rel="stylesheet" />
+<link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+<link href="assets/fire-subnav.css" rel="stylesheet"/>
 </head>
+
 <body class="bg-white text-dark">
 
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"><div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
             <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link active" href="index.html">Robots</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Robots</a></li>
                     <li class="nav-item"><a class="nav-link" href="basicbeam.html">BEAM</a></li>
                     <li class="nav-item"><a class="nav-link" href="se.html">Solar Engine</a></li>
                     <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
                     <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 </ul>
-</div>
+            </div>
         </div>
-    </nav><main id="Fire" class="container my-5"><!-- ROBOT SUBNAV --><div class="nav-wrapper overflow-auto">
+    </nav>
+
+    <main id="Fire" class="container my-5">
+
+        <!-- ROBOT SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
             <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav" style="min-width: 480px;">
-<li class="nav-item"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
+                <li class="nav-item"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
                 <li class="nav-item"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
                 <li class="nav-item"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
                 <li class="nav-item"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
             </ul>
-</div>
+        </div>
 
         <!-- SECTION MENU (CENTERED) -->
         <div class="fire-subnav">
@@ -142,19 +159,35 @@
         <div class="mb-4">
             <div class="carousel-container">
                 <!-- Prev arrow -->
-                <button type="button" class="carousel-arrow" id="media-prev" aria-label="Previous item">
+                <button
+                    type="button"
+                    class="carousel-arrow"
+                    id="media-prev"
+                    aria-label="Previous item">
                     <span class="arrow-icon">‹</span>
                 </button>
 
                 <!-- Shared media area (images + videos) -->
                 <div class="media-frame">
-                    <img id="fire-image" alt="FIRE gallery image" class="d-none"><video id="fire-video-player" class="d-none" controls><source id="fire-video-source" src="" type="video/mp4"></source>
+                    <img
+                        id="fire-image"
+                        alt="FIRE gallery image"
+                        class="d-none" />
+                    <video
+                        id="fire-video-player"
+                        class="d-none"
+                        controls>
+                        <source id="fire-video-source" src="" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-</div>
+                </div>
 
                 <!-- Next arrow -->
-                <button type="button" class="carousel-arrow" id="media-next" aria-label="Next item">
+                <button
+                    type="button"
+                    class="carousel-arrow"
+                    id="media-next"
+                    aria-label="Next item">
                     <span class="arrow-icon">›</span>
                 </button>
             </div>
@@ -166,7 +199,8 @@
 
 
         <!-- STORY CONTENT -->
-        <section class="py-4"><div class="container">
+        <section class="py-4">
+        <div class="container">
                     <p>
                     FIRE is my first microcontroller-based robot. It took around eight months to build — which is what happens when your planning process is “vibes first, logic later.” It started as an ambitious eight-motor walker, slowly devolved into a four-motor walker, then a two-motor walker, and finally surrendered and became a roller.
                     </p>
@@ -194,24 +228,26 @@
                     <!-- FEATURES -->
                     <h3 class="text-accent" style="font-weight:350; font-size:1.2rem;">Features</h3>
                     <ul>
-<li>8051 Microcontroller system</li>
+                        <li>8051 Microcontroller system</li>
                         <li>High torque motors</li>
                         <li>L298 Motor drivers for high current</li>
                         <li>Simple design</li>
                         <li>High load carrying capacity</li>
                     </ul>
-<h3 class="text-accent" style="font-weight:350; font-size:1.2rem;">Mechanics</h3>
+
+                    <h3 class="text-accent" style="font-weight:350; font-size:1.2rem;">Mechanics</h3>
                     <ul>
-<li>Aluminium body for light weight</li>
+                        <li>Aluminium body for light weight</li>
                         <li>Cast iron for stronger joints</li>
                         <li>12V DC Shunt Motor drawing 4A under load</li>
                         <li>5V DC Gear motor for camera movement</li>
                         <li>Custom nylon wheels</li>
                     </ul>
-<h3 class="text-accent" style="font-weight:350; font-size:1.2rem;">Electronics</h3>
+
+                    <h3 class="text-accent" style="font-weight:350; font-size:1.2rem;">Electronics</h3>
                     <p>Microcontroller- ATMEL AT89S8252:</p>
                     <ul>
-<li>8051 compatible</li>
+                        <li>8051 compatible</li>
                         <li>USART Serial Interface</li>
                         <li>8k Flash Memory</li>
                         <li>2k EEPROM</li>
@@ -219,9 +255,10 @@
                         <li>Four 8-bit bi-directional ports</li>
                         <li>Five interrupts</li>
                     </ul>
-<p>Microcontroller- ATMEL AT89S8252:</p>
+
+                    <p>Microcontroller- ATMEL AT89S8252:</p>
                     <ul>
-<li>8051 compatible</li>
+                        <li>8051 compatible</li>
                         <li>USART Serial Interface</li>
                         <li>8k Flash Memory</li>
                         <li>2k EEPROM</li>
@@ -229,38 +266,54 @@
                         <li>Four 8-bit bi-directional ports</li>
                         <li>Five interrupts</li>
                     </ul>
-<p>Motor Driver- L298 Dual Full Bridge Driver:</p>
+
+                    <p>Motor Driver- L298 Dual Full Bridge Driver:</p>
                     <ul>
-<li>Up to 46V supply</li>
+                        <li>Up to 46V supply</li>
                         <li>Up to 6A total DC current</li>
                         <li>Low saturation voltage</li>
                         <li>Over-temperature protection</li>
                         <li>High noise immunity</li>
                         <li>Parallel output for higher current</li>
                     </ul>
-<p>74HC245 Octal Transceiver</p>
+
+                    <p>74HC245 Octal Transceiver</p>
                     <ul>
-<li>140mA per terminal (four pins in parallel)</li>
+                        <li>140mA per terminal (four pins in parallel)</li>
                         <li>2–6V supply</li>
                         <li>Low quiescent current</li>
                     </ul>
-<p>Power Supply - L7805CV 5V regulator (1.5A):</p>
+
+                    <p>Power Supply - L7805CV 5V regulator (1.5A):</p>
                     <ul>
-<li>Thermal overload protection</li>
+                        <li>Thermal overload protection</li>
                         <li>Short-circuit protection</li>
                         <li>2 × 6V, 4.5A lead-acid rechargeable batteries</li>
                     </ul>
-<p>Sensors:</p>
+
+                    <p>Sensors:</p>
                     <ul>
-<li>Touch sensors</li>
+                        <li>Touch sensors</li>
                         <li>Infrared edge detection</li>
                     </ul>
-<h3 class="text-accent" style="font-weight:350; font-size:1.2rem;">Block diagram</h3>
+
+                    <h3 class="text-accent" style="font-weight:350; font-size:1.2rem;">Block diagram</h3>
                     <div class="mb-4">
                         <img src="images/FIRE/IMAGES/blcok.GIF" class="img-fluid" alt="FIRE Robot">
-</div>
+                    </div>
         </div>
-        </section></main><!-- Bootstrap JS --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><!-- Gallery (images + videos) JS --><script>
+        </section>
+
+
+
+
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Gallery (images + videos) JS -->
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const imgEl = document.getElementById("fire-image");
             const videoEl = document.getElementById("fire-video-player");
@@ -342,7 +395,11 @@
             // Initialize first item
             setItem(0);
         });
-    </script><footer class="bg-white text-center py-4 mt-5 border-top small text-muted"><p>© Viswas Nair TK</p>
+    </script>
+
+    <footer class="bg-white text-center py-4 mt-5 border-top small text-muted">
+        <p>© Viswas Nair TK</p>
     </footer>
+
 </body>
 </html>

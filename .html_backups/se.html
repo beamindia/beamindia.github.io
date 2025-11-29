@@ -1,11 +1,15 @@
+<!-- BeamIndia v29 patch applied on 2025-11-28 -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1" name="viewport">
-<title>BEAMINDIA - SOLAR ENGINES</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/favicon.ico" rel="icon" type="image/x-icon">
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>BEAMINDIA - SOLAR ENGINES</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <style>
         :root { --accent: #20c997; }
         a { color: var(--accent); }
         .text-accent { color: var(--accent) !important; }
@@ -85,30 +89,37 @@
             margin: 0;
         }
 </style>
-<link href="assets/style.css" rel="stylesheet">
-<link href="assets/navbar.css" rel="stylesheet">
+
+    <link href="assets/style.css" rel="stylesheet" />
+<link href="assets/navbar.css" rel="stylesheet"/>
 </head>
 <body class="bg-white text-dark">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"><div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
     <a class="navbar-brand site-brand" href="index.html">BEAMINDIA</a>
         <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link" href="index.html">Robots</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Robots</a></li>
                 <li class="nav-item"><a class="nav-link" href="basicbeam.html">BEAM</a></li>
                 <li class="nav-item"><a class="nav-link active" href="se.html">Solar Engine</a></li>
                 <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
                 <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             </ul>
-</div>
+        </div>
     </div>
-</nav><main class="container my-5"><meta content="/html; charset=utf-8" http-equiv="Content-Type">
-<title>BEAMINDIA - SOLAR ENGINES</title>
-<!-- ORIGINAL TEXT RESTORED --><h3>Building my first solar engine</h3>
+</nav>
+
+<main class="container my-5">
+    <meta content="/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>BEAMINDIA - SOLAR ENGINES</title>
+
+    <!-- ORIGINAL TEXT RESTORED -->
+    <h3>Building my first solar engine</h3>
 
     <p>After spending time reading, experimenting, and revisiting the fundamentals, I built a Flashing LED Solar Engine (FLED SE). It’s a fairly common design, but seeing my own build function correctly was still meaningful—it reinforced that hands-on experimentation is the fastest way to build confidence.</p>
 
@@ -127,21 +138,22 @@
     <p>If you’re testing a solar engine, always test outdoors. Indoor lighting—especially tube lights—doesn’t provide enough intensity. When removing solar cells from calculator frames, avoid pulling on the fine connection wires; they’re easy to tear and extremely difficult to repair. Conductive ink is theoretically available in Ritchie Street, but in practice, reliability is hit-or-miss.</p>
 
     <p>
-        <img border="3" height="384" src="images/SE/se.gif" width="400"></p>
+        <img border="3" height="384" src="images/SE/se.gif" width="400" />
+    </p>
 
     <h3>The FLED SE workings</h3>
     <p>First, the basics</p>
     <p>
-    </p>
-<ol>
-<li>In a NPN transistor current flows from emitter to collector. For this N(emitter) should be negative, P(base)
+    <ol>
+        <li>In a NPN transistor current flows from emitter to collector. For this N(emitter) should be negative, P(base)
         should be positive and N(collector) should be negative.</li>
         <li>In a PNP transistor current flows from collector to emitter. For this P(emitter) should be positive,
         N(base) should be negative and P(collector) should be positive.</li>
         <li>Certain components like Flashing LED's, LED's etc. let current flow through them only at a particular voltage
         across their terminals. Let us call these components trigger elements.</li>
     </ol>
-<p>The capacitor in a solar engine is essential because a solar cell alone can’t deliver enough instantaneous current to overcome a motor’s starting resistance. Instead, the system stores energy in the capacitor and releases it in short, useful bursts when the motor actually needs it.</p>
+    </p>
+    <p>The capacitor in a solar engine is essential because a solar cell alone can’t deliver enough instantaneous current to overcome a motor’s starting resistance. Instead, the system stores energy in the capacitor and releases it in short, useful bursts when the motor actually needs it.</p>
 
     <p>When left unconnected, the capacitor charges from the solar cell until it reaches the lower of the two limits: the solar cell’s maximum output voltage or the capacitor’s rated voltage.</p>
 
@@ -163,11 +175,12 @@
     <h3>Solar engine types</h3>
     <p>Solar engines are typically categorized into three main types, based on how they determine when to release stored energy to the motor:</p>
     <ul>
-<li>Type 1 – The motor runs when the circuit voltage reaches a defined threshold.</li>
+    <li>Type 1 – The motor runs when the circuit voltage reaches a defined threshold.</li>
     <li>Type 2 – The motor runs at fixed time intervals.</li>
     <li>Type 3 – The motor triggers when the capacitor’s charging rate begins to slow, essentially combining characteristics of Type 1 and Type 2.</li>
     </ul>
-<p>Most practical solar engines are Type 1, as they offer a straightforward design with good overall efficiency. Type 2 designs can also be efficient and are commonly used in single-neuron solar circuits to generate phototropic (light-seeking) behavior. Type 3 designs are theoretically the most efficient, but they remain largely conceptual and are rarely implemented in practice.</p>
+
+    <p>Most practical solar engines are Type 1, as they offer a straightforward design with good overall efficiency. Type 2 designs can also be efficient and are commonly used in single-neuron solar circuits to generate phototropic (light-seeking) behavior. Type 3 designs are theoretically the most efficient, but they remain largely conceptual and are rarely implemented in practice.</p>
 
     <p>Beyond using trigger elements like FLEDs, LEDs, or diodes, some solar engines rely on IC-based voltage triggers such as the 1381 series. These components provide more efficient and predictable activation. Solar engines can also be designed to trigger based on timing rather than voltage by using neuron-style circuits, which are useful for systems intended to charge during the day and activate a load at night.</p>
 
@@ -176,16 +189,25 @@
     <h3>Solar engine designs</h3>
 
     <!-- NEW CAROUSEL BLOCK AT BOTTOM -->
-    <section class="my-4"><div class="carousel-container">
-            <button type="button" class="carousel-arrow" id="se-prev" aria-label="Previous image">
+    <section class="my-4">
+        <div class="carousel-container">
+            <button
+                type="button"
+                class="carousel-arrow"
+                id="se-prev"
+                aria-label="Previous image">
                 <span class="arrow-icon">‹</span>
             </button>
 
             <div class="media-frame">
-                <img id="se-image" alt="Solar engine gallery image">
-</div>
+                <img id="se-image" alt="Solar engine gallery image" />
+            </div>
 
-            <button type="button" class="carousel-arrow" id="se-next" aria-label="Next image">
+            <button
+                type="button"
+                class="carousel-arrow"
+                id="se-next"
+                aria-label="Next image">
                 <span class="arrow-icon">›</span>
             </button>
         </div>
@@ -194,8 +216,16 @@
         <div class="text-center mt-2 small text-muted">
             <div id="se-index"></div>
         </div>
-    </section><footer class="bg-white text-center py-4 mt-5 small text-muted border-top"><p>© Viswas Nair TK</p>
-    </footer></main><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script>
+    </section>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
     const imgEl   = document.getElementById("se-image");
     const prevBtn = document.getElementById("se-prev");
@@ -241,5 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setItem(0);
 });
 </script>
+
 </body>
 </html>
