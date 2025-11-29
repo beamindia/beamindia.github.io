@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - FIRE - MOTORDRIVER</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
+        :root { --accent: #20c997; }
+        a { color: var(--accent); }
+        .text-accent { color: var(--accent)!important; }
+
+        /* your standard teal section heading */
+        .section-heading {
+            font-weight: 350 !important;
+            font-size: 1.2rem !important;
+            color: var(--accent) !important;
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+        }
+    </style>
+
+    <link href="assets/style.css" rel="stylesheet" />
+    <link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+<link href="assets/fire-subnav.css" rel="stylesheet"/>
+</head>
+<body class="bg-white text-dark">
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/basicbeam.html">BEAM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/se.html">Solar Engine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tutorials.html">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/links.html">Links</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- ROBOT SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
+            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav"
+                id="robot-subnav" style="min-width: 480px;">
+                <li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
+            </ul>
+        </div>
+
+        <!-- SECTION MENU -->
+        <div class="fire-subnav">
+    <a href="fire.html">Introduction</a> | <a href="firemechanics.html">Mechanics</a> | <a href="firemicrocontroller.html">Microcontroller</a> | <a href="firemotordriver.html" class="active">Motordriver</a> | <a href="firesensors.html">Sensors</a> | <a href="firepowersupply.html">Powersupply</a> | <a href="fireckt.html">Schematic</a> | <a href="firemiscellaneous.html">Miscellaneous</a>
+</div>
+
+        <p>
+            FIRE has two types of motors:
+            <ol>
+            <li>The motors for locomotion called the LOCOMOTORS (2 nos.)</li>
+            <li>The motor for the camera head called the CAM-MOTOR</li>
+            </ol>
+        </p>
+
+        <p>
+            Both these motors have different voltage and current ratings. The
+            current drawn by both these motors are more than what the
+            Microcontroller Unit (MCU) can provide them.
+        </p>
+        <p>
+            The ATMEL AT89S8252 microcontroller (MCU) provides a maximum output
+            current of 15mA and hence in no way can drive the motors directly.
+            Hence a circuit is needed in between the microcontroller and the motor
+            which will provide the required amperage to the motor using the low
+            current signal from the MCU. This is the function of the motor driver
+            circuit. Apart from the current, it is also necessary to control the
+            direction of motors as required in a situation. Hence, the two
+            criteria for the motor driver are:
+            <ol>
+            <li>Provide required current to the motor</li>
+            <li>Facilitate direction control</li>
+            </ol>
+        </p>
+
+        <!-- H-BRIDGE -->
+        <h3 class="section-heading">H-bridge for locomotors</h3>
+
+        <p>
+            The locomotors of FIRE are rated 12V and draws about 3 amperes of
+            current under extreme load for a speed of 35 rpm. Hence the motor
+            driver should provide 3.5 A of current and also facilitate direction
+            control using 15 mA signals from the MCU.
+        </p>
+
+        <p>
+            The motor driver is accomplished using an H-Bridge IC the L298N. For
+            an in depth tutorial on the working of the H-Bridge visit
+        </p>
+
+        <p>
+            <a href="https://web.archive.org/web/20041204173507/http://www.dprg.org/tutorials/1998-04a/" target="_blank">
+                http://www.dprg.org/tutorials/1998-04a
+            </a>
+        </p>
+
+        <p>
+            The L298N is an integrated monolithic circuit in a 15-lead Multiwatt
+            package. It is a high voltage, high current dual full-bridge driver
+            designed to accept standard TTL logic levels and drive inductive loads
+            such as relays, solenoids, DC and stepper motors. Two enable inputs
+            are provided to enable or disable the device independently of the
+            input signals. The emitters of the lower transistors of each bridge
+            are connected together and the corresponding external terminal can be
+            used for the connection of an external sensing resistor. An additional
+            supply input is provided so that the logic works at a lower voltage.
+        </p>
+
+        <p>Download datasheet <a href="L298.pdf">here</a></p>
+
+        <p>
+            <img src="images/FIRE/MOTORDRIVER/l298s.GIF" alt="L298 schematic" width="500" height="305" border="3"/>
+        </p>
+
+        <p>I used FR306 fast recovery diodes across the motor terminals.</p>
+
+        <!-- BUFFER AMPLIFIER -->
+        <h3 class="section-heading">Buffer amplifier for cam-motor</h3>
+
+        <p>
+            The cam-motor of FIRE is rated 5V and draws about 100 mA of current
+            under extreme load for a speed of 60 rpm. Hence the motor driver
+            should provide 100 mA of current and also facilitate direction control
+            using 15 mA signals from the MCU.
+        </p>
+        <p>
+            To accomplish the above criteria we can use a simple buffer amplifier
+            available in the form of the 74HC245, Octal 3-state transceiver.
+        </p>
+        <p>
+            The 74HC245 3-STATE bi-directional buffer utilizes advanced
+            silicon-gate CMOS technology, and is intended for two-way asynchronous
+            communication between data buses. It has high drive current outputs,
+            which enable high-speed operation even when driving large bus
+            capacitances. This circuit possesses the low power consumption and high noise
+            immunity usually associated with CMOS circuitry, yet has speeds
+            comparable to low power Schottky TTL circuits. All inputs are
+            protected from damage due to static discharge by diodes to Vcc and ground.
+        </p>
+
+        <p>The internal schematic of the chip is given below</p>
+
+        <p>
+            <img src="images/FIRE/MOTORDRIVER/buff1.GIF" alt="74HC245 internal schematic" width="323" height="231" border="3"/>
+        </p>
+
+        <p>
+            <img src="images/FIRE/MOTORDRIVER/buf2.GIF" alt="Buffer diagram 1" width="281" height="189" border="0"/>
+        </p>
+
+        <p>
+            The IC was primarily designed to act as a buffer chip in communication
+            systems. The IC has 8 inputs and 8 outputs and these 16 terminals are
+            bidirectional. Each output can give a maximum 35 mA of current.To
+            provide the required 100mA to the motor, 4 channels of input and the
+            corresponding output are connected in parallel to get 140mA (35mA × 4).
+            The same is done with the other 4 channels and the combined two
+            channels are connected to the two terminals of the motor
+        </p>
+
+        <p>
+            <img src="images/FIRE/MOTORDRIVER/buf3.GIF" alt="Buffer diagram 2" width="415" height="331" border="3"/>
+        </p>
+
+        <!-- TABLE HEADING -->
+        <h3 class="section-heading">Motor direction table</h3>
+        <div class="table-responsive">
+        <table class="table table-bordered align-middle text-center small">
+            <thead class="table-light">
+            <tr>
+                <th scope="col">Input 1</th>
+                <th scope="col">Input 2</th>
+                <th scope="col">Motor Direction</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Low</td>
+                <td>Low</td>
+                <td>Brake</td>
+            </tr>
+            <tr>
+                <td>Low</td>
+                <td>High</td>
+                <td>Clockwise</td>
+            </tr>
+            <tr>
+                <td>High</td>
+                <td>High</td>
+                <td>Brake</td>
+            </tr>
+            <tr>
+                <td>High</td>
+                <td>Low</td>
+                <td>Anti-clockwise</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+
+        <p>
+            This device has an active LOW enable input G and a direction control
+            input, DIR. When DIR is HIGH, data flows from the A inputs to the B
+            outputs. When DIR is LOW, data flows from the B inputs to the A
+            outputs. Whatever logic is available at the input of each channel is
+            also obtained at the outputs
+        </p>
+
+        <p>
+            The motor drivers of FIRE are designed in 3 PCB’s, one each for the
+            two H-Bridges for the locomotors and one buffer chip motor driver for
+            the cam-motor.
+        </p>
+
+        <!-- IMAGES -->
+        <h3 class="section-heading">Images</h3>
+
+        <p>
+            <img src="images/FIRE/MOTORDRIVER/FIRE03.JPG" alt="Motor driver boards" width="400" height="431" border="3"/>
+        </p>
+
+    </main>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

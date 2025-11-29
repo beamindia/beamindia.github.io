@@ -1,0 +1,20 @@
+/* BeamIndia Shared Navbar Styles */
+
+/* Inactive navigation links – soft gray */
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.55) !important;
+    transition: color 0.15s ease-in-out;
+    font-weight: 400;
+}
+
+/* Hover state – slightly darker gray */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.7) !important;
+    font-weight: 400;
+}
+
+/* Active page – teal accent */
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--accent) !important;
+    font-weight: 400;
+}

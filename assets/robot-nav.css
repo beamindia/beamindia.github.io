@@ -1,0 +1,24 @@
+/* ROBOT NAVBAR (Moby, Twalky, Fire, Scamvee) */
+
+/* Inactive tabs = gray text */
+.robot-nav .nav-link {
+    color: #6c757d !important;       /* <-- changed to gray */
+    font-weight: 400;
+    border-width: 1px !important;
+}
+
+/* Hover = teal text */
+.robot-nav .nav-link:hover {
+    color: var(--accent) !important;
+    opacity: 0.8;
+}
+
+/* Active tab = teal text + soft border */
+.robot-nav .nav-link.active {
+    color: var(--accent) !important;
+    font-weight: 400 !important;     /* remove bold */
+    background-color: #fff !important;
+
+    border-color: var(--accent) var(--accent) #fff !important;
+    border-width: 1px !important;
+}

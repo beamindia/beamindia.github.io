@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>BEAMINDIA - TUTORIALS - HACKING THE SERVO</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
+
+  <style>
+    :root { --accent: #20c997; }
+
+    .text-accent {
+      color: var(--accent) !important;
+      font-weight: 350;
+      font-size: 1.2rem;
+    }
+
+    /* Keep general text black, but allow headings to take accent color */
+    body, p {
+      color: #000 !important;
+    }
+
+    /* Links inherit color */
+    a {
+      color: inherit;
+    }
+
+    /* Wrapper spacing for subnav */
+    .nav-wrapper {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <link href="assets/style.css" rel="stylesheet"/>
+  <link href="assets/navbar.css" rel="stylesheet"/>
+  <link href="assets/robot-nav.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-white text-dark">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand site-brand" href="index.html">BEAMINDIA</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Robots</a></li>
+        <li class="nav-item"><a class="nav-link" href="basicbeam.html">BEAM</a></li>
+        <li class="nav-item"><a class="nav-link" href="se.html">Solar Engine</a></li>
+        <li class="nav-item"><a class="nav-link active" href="tutorials.html">Tutorials</a></li>
+        <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+
+  <!-- TUTORIAL SUBNAV (robot-nav style) -->
+  <div class="nav-wrapper overflow-auto">
+    <ul
+      class="nav nav-tabs robot-nav flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3"
+      id="tutorial-subnav"
+      style="min-width: 480px;"
+    >
+      <li class="nav-item flex-shrink-0">
+        <a class="nav-link active" href="servohack.html">Servo Hack</a>
+      </li>
+      <li class="nav-item flex-shrink-0">
+        <a class="nav-link" href="touchsensor.html">Touch Sensor</a>
+      </li>
+      <li class="nav-item flex-shrink-0">
+        <a class="nav-link" href="makingpcb.html">Making PCB</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CONTENT -->
+  <section class="row justify-content-center">
+    <div class="col-lg-8">
+
+      <p>
+        A standard hobby servo such as the Hitec HS-300 includes three terminals: two for power and
+        one for the control/feedback signal. Internally, position feedback is provided by a
+        potentiometer whose resistance changes as the shaft rotates. The built-in electronics use
+        this feedback to hold the shaft at a commanded angle, typically within a range of about
+        180–270 degrees. Hacking the servo removes the position-control electronics and mechanical
+        stop so the unit can be used as a simple, continuous-rotation DC gearmotor.
+      </p>
+
+      <ol class="list-unstyled">
+
+        <!-- STEP 1 -->
+        <li class="mb-4">
+          <h3 class="step-heading h6 mb-2 text-accent">Step 1 — Parts</h3>
+          <img src="images/TUTORIALS/s1.jpg" alt="Servo hack step 1 - parts" class="img-fluid mb-2" />
+          <p class="mb-0">
+            The basic requirements are: an HS-300 (or similar) servo, tape to stabilise the gear
+            stack during disassembly, and a few hand tools such as a Phillips screwdriver and a
+            sharp blade. If the gear train will be fully removed and the housing reused for other
+            circuitry, taping the gears is optional.
+          </p>
+        </li>
+
+        <!-- STEP 2 -->
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 2 — Open the Case</h3>
+          <img src="images/TUTORIALS/s2.jpg" alt="Servo hack step 2 - open" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Remove the mounting screws and lift off the rear cover of the servo. Take care not to
+            spill the gear train. If necessary, use tape to hold the gears together as a stack.
+          </p>
+        </li>
+
+        <!-- STEP 3 -->
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 3 — Remove the PCB</h3>
+          <img src="images/TUTORIALS/s3.jpg" alt="Servo hack step 3 - PCB removal" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Desolder or cut the connections from the motor and potentiometer to the control PCB.
+            Once disconnected, remove the PCB from the case. The motor and feedback pot will remain
+            as purely mechanical components.
+          </p>
+        </li>
+
+        <!-- STEP 4 -->
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 4 — Isolate the Potentiometer</h3>
+          <img src="images/TUTORIALS/s4.jpg" alt="Servo hack step 4 - potentiometer" class="img-fluid mb-2" />
+          <p class="mb-0">
+            In some designs, it helps to fix the potentiometer in a central position so it no
+            longer limits motion. You can glue it in place or leave it unconnected if it’s not
+            mechanically coupled to the output shaft.
+          </p>
+        </li>
+
+        <!-- STEP 5 -->
+        <li class="mb-4">
+          <h3 class="step-heading h6 mb-2 text-accent">Step 5 — Remove the Mechanical Stop</h3>
+          <img src="images/TUTORIALS/s5.jpg" alt="Servo hack step 5 - stop tab" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Most hobby servos include a small plastic tab on one of the gears to prevent full
+            rotation. For continuous rotation, carefully remove this tab using a sharp blade. The
+            goal is to allow the gear to rotate freely through 360 degrees without binding.
+          </p>
+        </li>
+
+        <!-- STEP 6 -->
+        <li class="mb-4">
+          <h3 class="step-heading h6 mb-2 text-accent">Step 6 — Motor Leads</h3>
+          <img src="images/TUTORIALS/s6.jpg" alt="Servo hack step 6 - soldering" class="img-fluid mb-2" />
+          <p class="mb-0">
+            With the PCB out of the way, solder two wires directly to the motor terminals. These
+            wires become the new motor leads and can be routed out through the original cable exit
+            or through a new opening in the housing, depending on the mechanical layout.
+          </p>
+        </li>
+
+        <!-- STEP 7 -->
+        <li class="mb-4">
+          <h3 class="step-heading h6 mb-2 text-accent">Step 7 — Reassembly</h3>
+          <img src="images/TUTORIALS/s7.jpg" alt="Servo hack step 7 - completed servo hack" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Reinstall the gear train in its original order, verify that the output shaft rotates
+            smoothly, and close the case. Once reassembled, the former servo now functions as a
+            compact, continuous-rotation DC gearmotor that can be driven from any suitable motor
+            driver or directly from a supply in simple test setups.
+          </p>
+        </li>
+
+      </ol>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+  © Viswas Nair TK
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

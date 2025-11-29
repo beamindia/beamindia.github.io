@@ -1,0 +1,228 @@
+<!-- BeamIndia v26 patch applied on 2025-11-03 -->
+<!-- BeamIndia v25 patch applied on 2025-11-03 -->
+<!-- BeamIndia v24 patch applied on 2025-11-03 -->
+<!-- BeamIndia v23 patch applied on 2025-11-02 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>BEAMINDIA - MY ROBOTS - MOBY</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
+
+<style>
+:root { --accent: #20c997; }
+a { color: var(--accent); }
+.text-accent { color: var(--accent)!important; }
+.btn-accent { background-color: var(--accent); color: #fff; }
+
+/* Carousel styles (from fire.html) */
+.media-frame {
+    width: 100%;
+    max-width: 520px;      /* tweak this if you want a wider/narrower carousel */
+    height: 520px;         /* FIXED HEIGHT – this is what stops the layout jumping */
+    margin: 0 auto;
+    background: #ffffff;   /* white padding around non-full images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;      /* hides anything that might spill out */
+}
+
+.media-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;           /* preserve aspect ratio */
+    height: auto;          /* preserve aspect ratio */
+    object-fit: contain;   /* just in case – keeps full image visible */
+    display: block;
+    background: transparent;
+}
+
+.carousel-arrow {
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(2px);
+    color: #fff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0,0,0,0.55);
+}
+
+.arrow-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    display: block;
+    transform: translateY(-2px);
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-container > * {
+    margin: 0;
+}
+
+.carousel-container .media-frame {
+    margin: 0;
+}
+</style>
+
+<link href="assets/style.css" rel="stylesheet"/>
+<link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-white text-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<div class="container">
+<a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
+<li class="nav-item"><a class="nav-link" href="/basicbeam.html">BEAM</a></li>
+<li class="nav-item"><a class="nav-link" href="/se.html">Solar Engine</a></li>
+<li class="nav-item"><a class="nav-link" href="/tutorials.html">Tutorials</a></li>
+<li class="nav-item"><a class="nav-link" href="/links.html">Links</a></li>
+<li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<main class="container my-5">
+    <!-- ROBOT SUBNAV -->
+    <div class="nav-wrapper overflow-auto">
+        <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav" id="robot-subnav" style="min-width: 480px;">
+            <li class="nav-item flex-shrink-0"><a class="nav-link" href="fire.html#Fire">Fire</a></li>
+            <li class="nav-item flex-shrink-0"><a class="nav-link active" href="moby.html#Moby">Moby</a></li>
+            <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
+            <li class="nav-item flex-shrink-0"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
+        </ul>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="my-4">
+        <div class="carousel-container">
+            <button type="button" class="carousel-arrow" id="moby-prev" aria-label="Previous image">
+                <span class="arrow-icon">‹</span>
+            </button>
+
+            <div class="media-frame">
+                <img id="moby-image" alt="MOBY gallery image" />
+            </div>
+
+            <button type="button" class="carousel-arrow" id="moby-next" aria-label="Next image">
+                <span class="arrow-icon">›</span>
+            </button>
+        </div>
+
+        <!-- INDEX -->
+        <div class="text-center mt-2 small text-muted">
+            <div id="moby-index"></div>
+        </div>
+    </div>
+
+
+    <p>
+        Moby is my first solar roller and runs on a 1381-based solar engine using a 1381J, 2N3904, 2N3906, a 2.2 kΩ resistor, and a 0.33 F capacitor. 
+        The 1381J triggers at approximately 2.97 V across the storage capacitor. 
+        The entire solar engine was free-formed as in <a href="https://web.archive.org/web/20051201000000/http://www.beam-online.com/" target="_blank" rel="noopener noreferrer">Free forming the 1381 SE</a>
+    <p>
+        The 1381 IC, solar cell, 0.33 F capacitors, and pager motors used in this build were provided by a supporter in the US who preferred to remain anonymous.
+    </p>
+
+    <p>
+        1381s are still difficult to find locally, so most builders in India may need to rely on FLEDs (flashing LEDs) instead. 
+        FLEDs are available in some electronics shops—I found them in Chennai. 
+        Pager motors are the same type used in older Mobi pagers and can sometimes be found in second-hand markets, 
+        though removing the counterweight from the shaft can be tricky. 
+        High-value capacitors like 0.33 F and 1 F are available in Chennai, though they tend to be relatively expensive.
+    </p>
+
+    <p>
+        Solar cells from old calculators can be reused, and wiring them in series or parallel lets you tune the output depending on the requirement—series for higher voltage, parallel for higher current. In this build, however, the primary solar cell was an imported unit.
+    </p>
+
+
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const imgEl = document.getElementById("moby-image");
+    const prevBtn = document.getElementById("moby-prev");
+    const nextBtn = document.getElementById("moby-next");
+
+    if (!imgEl || !prevBtn || !nextBtn) return;
+
+    const items = [
+        { src: "images/MOBY/mlsideflash.jpg", label: "main" },
+        { src: "images/MOBY/mfront.jpg", label: "mfront" },
+        { src: "images/MOBY/mhind.jpg", label: "mhind" },
+        { src: "images/MOBY/mhoodnoflash.jpg", label: "mhoodnoflash" },
+        { src: "images/MOBY/mopenwheel.jpg", label: "mopenwheel" },
+        { src: "images/MOBY/mrear.jpg", label: "mrear" },
+        { src: "images/MOBY/mrsideflash.jpg", label: "mrsideflash" },
+        { src: "images/MOBY/mse1flash.jpg", label: "mse1flash" },
+        { src: "images/MOBY/msemiwheel.jpg", label: "msemiwheel" },
+        { src: "images/MOBY/mtop1.jpg", label: "mtop1" }
+    ];
+
+    let currentIndex = 0;
+
+    function setItem(index) {
+        if (index < 0 || index >= items.length) return;
+        currentIndex = index;
+        const item = items[currentIndex];
+        imgEl.src = item.src;
+        imgEl.alt = item.label || "MOBY gallery image";
+        document.getElementById("moby-index").textContent =
+          (currentIndex + 1) + " / " + items.length;
+
+    }
+
+    prevBtn.addEventListener("click", function () {
+        const newIndex = (currentIndex - 1 + items.length) % items.length;
+        setItem(newIndex);
+    });
+
+    nextBtn.addEventListener("click", function () {
+        const newIndex = (currentIndex + 1) % items.length;
+        setItem(newIndex);
+    });
+
+    setItem(0);
+});
+</script>
+
+</body>
+</html>

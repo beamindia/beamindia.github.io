@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>BEAMINDIA - TUTORIALS - TOUCH SENSOR</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
+
+  <style>
+    :root { --accent: #20c997; }
+
+    .text-accent {
+      color: var(--accent) !important;
+      font-weight: 350;
+      font-size: 1.2rem;
+    }
+
+    /* Keep main body text black, but allow headings to use accent if needed */
+    body, p { color: #000 !important; }
+
+    /* Links inherit color */
+    a { color: inherit; }
+
+    /* Wrapper spacing for subnav */
+    .nav-wrapper {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <link href="assets/style.css" rel="stylesheet"/>
+  <link href="assets/navbar.css" rel="stylesheet"/>
+  <link href="assets/robot-nav.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-white text-dark">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand site-brand" href="index.html">BEAMINDIA</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Robots</a></li>
+        <li class="nav-item"><a class="nav-link" href="basicbeam.html">BEAM</a></li>
+        <li class="nav-item"><a class="nav-link" href="se.html">Solar Engine</a></li>
+        <li class="nav-item"><a class="nav-link active" href="tutorials.html">Tutorials</a></li>
+        <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+
+  <!-- TUTORIAL SUBNAV (robot-nav style) -->
+  <div class="nav-wrapper overflow-auto">
+    <ul class="nav nav-tabs robot-nav flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3" style="min-width: 480px;">
+      <li class="nav-item flex-shrink-0">
+        <a class="nav-link" href="servohack.html">Servo Hack</a>
+      </li>
+      <li class="nav-item flex-shrink-0">
+        <a class="nav-link active" href="touchsensor.html">Touch Sensor</a>
+      </li>
+      <li class="nav-item flex-shrink-0">
+        <a class="nav-link" href="makingpcb.html">Making PCB</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CONTENT -->
+  <section class="row justify-content-center">
+    <div class="col-lg-8">
+
+      <p>
+        Touch sensors provide a simple way for robots to detect collisions or trigger actions when they come into contact with an object. The concept is straightforward: a normally open circuit is closed when the sensor assembly compresses against a surface.
+      </p>
+
+      <ol class="list-unstyled">
+
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 1 — Parts</h3>
+          <img src="images/TUTORIALS/ts1.jpg" alt="Touch sensor step 1 - parts" class="img-fluid mb-2" />
+          <p class="mb-0">
+            This build uses a small spring, a pencil eraser, tape, and a few short lengths of wire. These form both the mechanical structure and the electrical contacts of the sensor.
+          </p>
+        </li>
+
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 2 — Prepare the Eraser</h3>
+          <img src="images/TUTORIALS/ts2.jpg" alt="Touch sensor step 2 - eraser" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Remove the eraser from the back of a pencil. It will serve as the compressible core inside the spring, helping the assembly return to its original position after contact.
+          </p>
+        </li>
+
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 3 — Insert the Eraser into the Spring</h3>
+          <img src="images/TUTORIALS/ts3.jpg" alt="Touch sensor step 3 - eraser in spring" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Press the eraser firmly into one end of the spring so it sits snugly. This creates a cushioned, responsive contact element that can compress smoothly during impact.
+          </p>
+        </li>
+
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 4 — First Electrical Connection</h3>
+          <img src="images/TUTORIALS/ts4.jpg" alt="Touch sensor step 4 - first solder" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Solder a wire to the spring to create one terminal. Make a small hole through the center of the eraser and pass a second wire through it so that it extends from both ends. This second wire forms the other terminal in the circuit.
+          </p>
+        </li>
+
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 5 — Alignment and Taping</h3>
+          <img src="images/TUTORIALS/ts5.jpg" alt="Touch sensor step 5 - taping" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Use tape to secure the spring, eraser, and wires so the assembly stays aligned and mechanically stable. The structure should remain firm while still allowing the spring to compress freely.
+          </p>
+        </li>
+
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 6 — Extend the Feeler Wires</h3>
+          <img src="images/TUTORIALS/ts6.jpg" alt="Touch sensor step 6 - second solder" class="img-fluid mb-2" />
+          <p class="mb-0">
+            Solder longer wires to the spring on the opposite side. These act as the feelers that touch obstacles. When the feelers meet a surface, they push the spring and eraser inward, closing the circuit.
+          </p>
+        </li>
+
+        <li class="mb-4">
+          <h3 class="h6 mb-2 text-accent">Step 7 — Completion</h3>
+          <img src="images/TUTORIALS/ts7.jpg" alt="Touch sensor step 7 - finished sensor" class="img-fluid mb-2" />
+          <p class="mb-0">
+            The finished sensor has two rear wires that act as the output terminals. When the feelers press into an object and the spring compresses, the circuit closes. If simultaneous contact between both feelers and the same surface is a concern, consider using a single-feeler design or positioning multiple sensors so the feelers don’t overlap.
+          </p>
+        </li>
+
+      </ol>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+  © Viswas Nair TK
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

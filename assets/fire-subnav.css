@@ -1,0 +1,45 @@
+.fire-subnav {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Base link style */
+.fire-subnav a {
+    color: #6c757d;              /* subtle gray text */
+    text-decoration: none;       /* remove default underline */
+    margin: 0 0.5rem;
+    padding: 0.3rem 0.1rem;
+    position: relative;          /* needed for custom underline */
+    display: inline-block;
+}
+
+/* Custom underline (for hover + active) */
+.fire-subnav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;                /* 🔥 moves underline further from text */
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.18s ease;
+    border-radius: 1px;
+}
+
+/* Hover underline */
+.fire-subnav a:hover::after {
+    width: 100%;
+    opacity: 0.85;
+}
+
+/* Active link: underline stays visible */
+.fire-subnav .active::after {
+    width: 100%;
+}
+
+/* Active link emphasis */
+.fire-subnav .active {
+    font-weight: 500;
+}

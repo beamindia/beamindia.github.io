@@ -1,0 +1,249 @@
+<!-- BeamIndia v27 patch applied on 2025-11-04 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - SCAMVEE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
+:root {
+            --accent: #20c997;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        .text-accent {
+            color: var(--accent) !important;
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: #fff;
+        }
+
+        /* FINAL CAROUSEL CSS YOU PROVIDED */
+        .media-frame {
+            width: 100%;
+            max-width: 520px;
+            height: 520px;
+            margin: 0 auto;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .media-frame img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            background: transparent;
+        }
+
+        .carousel-arrow {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(2px);
+            color: #fff;
+            border: none;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .arrow-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+            display: block;
+            transform: translateY(-2px);
+        }
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 0.25rem;
+        }
+
+        .carousel-container>* {
+            margin: 0;
+        }
+</style>
+
+    <link href="assets/style.css" rel="stylesheet" />
+<link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-white text-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/basicbeam.html">BEAM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/se.html">Solar Engine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tutorials.html">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/links.html">Links</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- ROBOT SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
+            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav"
+                id="robot-subnav" style="min-width: 480px;">
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="fire.html#Fire">Fire</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link active" href="scamvee.html#Scamvee">Scamvee</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- UPDATED CAROUSEL AT TOP -->
+        <div class="my-4">
+            <div class="carousel-container">
+                <button type="button" class="carousel-arrow" id="scamvee-prev" aria-label="Previous image">
+                    <span class="arrow-icon">‹</span>
+                </button>
+
+                <div class="media-frame">
+                    <img id="scamvee-image" alt="Scamvee gallery image" />
+                </div>
+
+                <button type="button" class="carousel-arrow" id="scamvee-next" aria-label="Next image">
+                    <span class="arrow-icon">›</span>
+                </button>
+            </div>
+        </div>
+        <!-- INDEX -->
+        <div class="text-center mt-2 small text-muted">
+            <div id="scamvee-index"></div>
+        </div>
+
+
+        <!-- TEXT CONTENT -->
+        <h3 class="text-accent" style="font-weight:200; font-size:1.2rem;">Introduction</h3>
+        <p>
+        Scamvee was built as a small inspection platform designed to run along railway tracks and detect cracks or abnormal gaps.
+        Mechanically, it shares a lot with FIRE, and the core electronics are largely identical. For circuit-level details, FIRE’s
+        documentation is the best reference. The differences in Scamvee come mainly from the specific requirements of its track-inspection role.
+        </p>
+
+        <h3 class="text-accent" style="font-weight:200; font-size:1.2rem;">Mechanics</h3>
+        <p>
+        Scamvee became an opportunity to refine aspects of FIRE’s mechanical design. FIRE’s biggest limitation was the motor
+        configuration—its symmetric layout required awkward cutting and welding that never felt ideal. For Scamvee, car power-window
+        motors were used instead, taking advantage of their mirrored housings to keep the mounting simple and clean.
+        </p>
+        <p>
+        The wheels came from a children’s tricycle, chosen for their metal hubs and rubber tires. Removing the rubber grip made them
+        behave more like train wheels and allowed Scamvee to run reliably on a custom test track. With the rubber grip intact, it could
+        operate on flat surfaces as well, but with four fixed wheels and no steering, maneuverability was limited.
+        </p>
+
+        <h3 class="text-accent" style="font-weight:200; font-size:1.2rem;">Algorithm</h3>
+        <p>
+        The detection approach was straightforward: an IR sensor pointed toward the track monitored for surface continuity. When the
+        sensor encountered a gap, a timer started; once the track was detected again, the timer stopped. Since Scamvee’s speed was
+        known, the duration of the gap corresponded directly to its physical length. If the measured gap exceeded a defined threshold,
+        the system flagged it and responded—during testing, Scamvee simply reversed back onto the track for review.
+        </p>
+
+        <h3 class="text-accent" style="font-weight:200; font-size:1.2rem;">Other Details</h3>
+        <p>
+        The microcontroller and motor-driver setup were carried over from FIRE, and the sensor system followed the same general
+        principles. In the photos shown here, the complete sensor assembly had not yet been installed.
+        </p>
+
+
+        <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+            <p>© Viswas Nair TK</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imgEl = document.getElementById("scamvee-image");
+            const prevBtn = document.getElementById("scamvee-prev");
+            const nextBtn = document.getElementById("scamvee-next");
+
+            if (!imgEl || !prevBtn || !nextBtn) return;
+
+            const items = [
+                { src: "images/SCAMVEE/SCAMVEE2_0002.jpg", label: "SCAMVEE2_0002" },
+                { src: "images/SCAMVEE/SCAMVEE2_0003.jpg", label: "SCAMVEE2_0003" },
+                { src: "images/SCAMVEE/scamvee_0006.jpg", label: "scamvee_0006" },
+                { src: "images/SCAMVEE/SCAMVEE_0007.jpg", label: "SCAMVEE_0007" },
+                { src: "images/SCAMVEE/SCAMVEE_0008.jpg", label: "SCAMVEE_0008" },
+                { src: "images/SCAMVEE/SCAMVEE_0009.jpg", label: "SCAMVEE_0009" },
+                { src: "images/SCAMVEE/SCAMVEE_0010.jpg", label: "SCAMVEE_0010" },
+                { src: "images/SCAMVEE/SCAMVEE_0011.jpg", label: "SCAMVEE_0011" }
+            ];
+
+            let currentIndex = 0;
+
+            function setItem(index) {
+                if (index < 0 || index >= items.length) return;
+                currentIndex = index;
+                const item = items[currentIndex];
+                imgEl.src = item.src;
+                imgEl.alt = item.label || "Scamvee gallery image";
+                document.getElementById("scamvee-index").textContent =
+                  (currentIndex + 1) + " / " + items.length;
+
+            }
+
+            prevBtn.addEventListener("click", function () {
+                const newIndex = (currentIndex - 1 + items.length) % items.length;
+                setItem(newIndex);
+            });
+
+            nextBtn.addEventListener("click", function () {
+                const newIndex = (currentIndex + 1) % items.length;
+                setItem(newIndex);
+            });
+
+            setItem(0);
+        });
+    </script>
+
+</body>
+
+</html>

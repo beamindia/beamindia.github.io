@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - FIRE - MECHANICS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
+        :root { --accent: #20c997; }
+        a { color: var(--accent); }
+        .text-accent { color: var(--accent)!important; }
+        .btn-accent { background-color: var(--accent); color: #fff; }
+
+        /* standardized heading style */
+        .section-heading {
+            font-weight: 350 !important;
+            font-size: 1.2rem !important;
+            color: var(--accent) !important;
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+        }
+    </style>
+
+    <link href="assets/style.css" rel="stylesheet" />
+    <link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+    <link href="assets/fire-subnav.css" rel="stylesheet"/>
+    </head>
+    <body class="bg-white text-dark">
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/basicbeam.html">BEAM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/se.html">Solar Engine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tutorials.html">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/links.html">Links</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- ROBOT SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
+            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav"
+                id="robot-subnav" style="min-width: 480px;">
+                <li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
+            </ul>
+        </div>
+
+        <!-- SECTION MENU -->
+        <div class="fire-subnav">
+          <a href="fire.html">Introduction</a> | <a href="firemechanics.html" class="active">Mechanics</a> | <a href="firemicrocontroller.html">Microcontroller</a> | <a href="firemotordriver.html">Motordriver</a> | <a href="firesensors.html">Sensors</a> | <a href="firepowersupply.html">Powersupply</a> | <a href="fireckt.html">Schematic</a> | <a href="firemiscellaneous.html">Miscellaneous</a>
+        </div>
+
+        <!-- CONTENT -->
+        <section class="py-4">
+        <div class="container">
+            <!-- DESIGN GOALS -->
+            <h3 class="section-heading">Design goals</h3>
+            <ul>
+                <li>Simple construction</li>
+                <li>Compact and lightweight</li>
+                <li>Cost-effective</li>
+                <li>Easy to reconfigure</li>
+                <li>Motors with high torque</li>
+                <li>Space to add more sensors</li>
+                <li>Enough mounting area for electronics</li>
+            </ul>
+
+            <!-- MAIN BODY STRUCTURE -->
+            <h3 class="section-heading">Main body structure</h3>
+            <p>The robot is built around a sturdy aluminium frame. The primary components are:</p>
+            <ul>
+                <li>Aluminium chassis</li>
+                <li>Cast-steel motor clamps</li>
+                <li>High-torque motors</li>
+                <li>Custom-machined nylon wheels</li>
+                <li>Battery bay</li>
+                <li>Sensor bay</li>
+                <li>Mounting points for circuit boards</li>
+                <li>A dedicated mount for a surveillance camera</li>
+            </ul>
+
+            <!-- FRAME -->
+            <h3 class="section-heading">Frame</h3>
+            <p>
+                The frame turned out to be the trickiest part of the entire build. It’s made from two long aluminium
+                bars—the same type used for sliding windows and doors. Holes were drilled along them to mount the motors,
+                sensors, and electronics.
+            </p>
+            <p>
+                The two aluminium rods are each 75 cm long, placed 5 cm apart, and connected through the motor clamp.
+                The frame is divided into three functional sections:
+            </p>
+            <ul>
+                <li>Front: camera head and obstacle sensors</li>
+                <li>Middle: motor clamps and circuit board stack</li>
+                <li>Rear: battery bay and support wheel</li>
+            </ul>
+
+            <!-- BATTERY BAY -->
+            <h3 class="section-heading">Battery bay</h3>
+            <p>
+                The robot uses two 6V, 4.5Ah sealed lead-acid batteries. Since they sit at the rear of the frame,
+                a universal support wheel was added to reduce friction and prevent the tail from dragging.
+                The support wheel was sourced from a refrigerator spare-parts shop.
+            </p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE12.JPG" alt="Battery bay" width="400" height="211" border="0"/>
+            </p>
+
+            <p>
+                The battery tray is a simple rectangular metal plate with holes drilled for bolts and the support wheel.
+            </p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE17.JPG" alt="Battery bay plate" width="273" height="339" border="0"/>
+            </p>
+            <p>(Battery Bay)</p>
+
+            <!-- MOTOR & CLAMP -->
+            <h3 class="section-heading">Motor &amp; clamp</h3>
+            <p>
+                FIRE runs on two INRAD 12V tri-speed wiper motors—one for each wheel. They offer speeds of 25, 35, and
+                45 rpm, and were purchased from a local automobile market.
+            </p>
+
+            <p>
+                The motor must have enough torque to carry the weight of the robot and any payload, if necessary. I
+                measured the torque to be about 60 kg·cm. In this robot, the motors are operated at 25 rpm to reduce the
+                current drawn. The peak current drawn is 4 A under full load.
+            </p>
+
+            <p>Torque = Force × perpendicular distance</p>
+
+            <p>
+                To estimate the torque, we attached a 10 cm steel rod to the motor shaft. We then added weights at the end
+                of the rod until the motor could no longer complete continuous 360-degree rotations. At that point, the
+                motor was unable to lift a load of about 6 kg.
+            </p>
+
+            <p>Torque = 6 × 10 kg·cm = 60 kg·cm</p>
+
+            <p>
+                After the robot was assembled it could lift about 7 kg. I ran out of extra weights to test with. My guess
+                is that it can easily carry another 5 kg. The robot itself weighs 6 kg and, in addition to that, I
+                estimate it can carry an additional 13 kg.
+            </p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE09.JPG" alt="INRAD Motors" width="400" height="275" border="0"/>
+            </p>
+
+            <p>(INRAD 12 V, tri-speed wiper motors)</p>
+
+            <p>
+                One challenge was that when mounted vertically, the two motor bodies don’t sit in the same plane, causing
+                a slight imbalance. To compensate, a custom clamp with a tilt in the holding area was designed. It works
+                well enough, though a cleaner solution would be to replace the internal gears with custom ones.
+            </p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE10.JPG" alt="Motor clamp" width="400" height="156" border="0"/>
+            </p>
+
+            <p>(Motor clamp resting on a small reddish-brown box. The clamps are at an angle to each other, not visible in this image)</p>
+
+            <!-- WHEELS -->
+            <h3 class="section-heading">Wheels</h3>
+            <p>
+                My initial idea for the wheels was to use chain sprockets from motor bikes. However, they were too heavy
+                and the teeth were dangerous. I decided instead to make custom nylon wheels for the robot. These turned
+                out to be the most expensive part of the build. I spent Rs. 600 for 2.5 kg of nylon cylinder stock and then
+                took it to a lathe to machine the wheels to the required dimensions.
+            </p>
+
+            <p>
+                The diameter of each wheel is 150 mm and the width is 10 mm. The wheel includes a provision to attach the
+                motor shaft using Allen screws. The diameter of the wheel plays a major role in determining the speed of
+                the robot.
+            </p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE11.JPG" alt="Nylon wheels" width="491" height="243" border="0"/>
+            </p>
+            <p>(Nylon wheels)</p>
+
+            <p>
+                To achieve a speed of 20 cm/min, the wheel radius was calculated based on the motor’s rotational speed.
+                The motor runs at 25 rpm, so substituting into the linear velocity formula:
+            </p>
+
+            <p>Linear velocity = angular velocity × circumference</p>
+            <p>20 = 25 × 2 × π × R</p>
+            <p>Solving for R, R = 20 / (25 × 2 × π)</p>
+            <p>This gives a wheel radius of approximately 7.5 cm.</p>
+
+            <!-- CIRCUIT BOARD MOUNTS -->
+            <h3 class="section-heading">Circuit board mounts</h3>
+            <p>
+                The circuit boards are stacked one above the other in the middle part of the robot using long 8&quot; bolts.
+            </p>
+
+            <!-- SURVEILLANCE CAMERA MOUNT -->
+            <h3 class="section-heading">Surveillance camera mount</h3>
+            <p>
+                The camera head is mounted on the front part of the robot on the aluminium frame, giving it a full view
+                of the surroundings.
+            </p>
+
+            <!-- IR SENSOR BAY -->
+            <h3 class="section-heading">IR sensor bay</h3>
+            <p>
+                The IR sensors are mounted on small aluminium brackets at the front part of the frame. The bolts allow
+                the sensors to maintain a low clearance so they can easily detect edges.
+            </p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE14.JPG" alt="IR bay" width="400" height="209" border="0"/>
+            </p>
+
+            <!-- IMAGES -->
+            <h3 class="section-heading">Images</h3>
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE16.JPG" alt="Motor, wheel and clamp assembly" width="400" height="289" border="0"/>
+            </p>
+
+            <p>(Motor + wheel + clamp)</p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE18.JPG" alt="Frame with motors, wheels and clamp" width="400" height="309" border="0"/>
+            </p>
+
+            <p>(Frame + motor + wheel + clamp)</p>
+
+            <p>
+                <img src="images/FIRE/Mechanics/FIRE23.JPG" alt="Frame with motors, battery bay and camera head" width="475" height="278" border="0"/>
+            </p>
+
+            <p>(The frame with motors, battery bay and camera head mounted.)</p>
+
+        </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

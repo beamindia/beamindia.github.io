@@ -1,0 +1,276 @@
+<!-- BeamIndia v29 patch applied on 2025-11-28 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>BEAMINDIA - SOLAR ENGINES</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <style>
+        :root { --accent: #20c997; }
+        a { color: var(--accent); }
+        .text-accent { color: var(--accent) !important; }
+        .btn-accent { background-color: var(--accent); color: #fff; }
+
+        /* Convert <h2> → <h3> stylings */
+        main h3 {
+        color: var(--accent) !important;
+        font-weight: 200;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        }
+
+        /* Carousel frame – same pattern as robots, fixed height */
+        .media-frame {
+            width: 100%;
+            max-width: 520px;
+            height: 520px;
+            margin: 0 auto;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .media-frame img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            background: transparent;
+        }
+
+        .carousel-arrow {
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(2px);
+            color: #fff;
+            border: none;
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .arrow-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+            display: block;
+            transform: translateY(-2px);
+        }
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 0.25rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-container > * {
+            margin: 0;
+        }
+</style>
+
+    <link href="assets/style.css" rel="stylesheet" />
+<link href="assets/navbar.css" rel="stylesheet"/>
+</head>
+<body class="bg-white text-dark">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+        <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/">Robots</a></li>
+                <li class="nav-item"><a class="nav-link" href="/basicbeam.html">BEAM</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/se.html">Solar Engine</a></li>
+                <li class="nav-item"><a class="nav-link" href="/tutorials.html">Tutorials</a></li>
+                <li class="nav-item"><a class="nav-link" href="/links.html">Links</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <meta content="/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>BEAMINDIA - SOLAR ENGINES</title>
+
+    <!-- ORIGINAL TEXT RESTORED -->
+    <h3>Building My First Solar Engine</h3>
+
+    <p>After spending time reading, experimenting, and revisiting the fundamentals, I built a Flashing LED Solar Engine (FLED SE). It’s a fairly common design, but seeing my own build function correctly was still meaningful—it reinforced that hands-on experimentation is the fastest way to build confidence.</p>
+
+    <p>I first prototyped the circuit on a breadboard before committing to a free-form version. I paired two 4700 µF capacitors to approximate 9400 µF. In Chennai, high-capacitance capacitors often come with unnecessarily high voltage ratings, which makes them physically large and impractical for lightweight BEAM-style robots.</p>
+
+    <p>I eventually decided not to integrate the solar engine into a robot because the pager motor I had simply wasn’t capable of delivering enough torque. Even slight resistance caused the shaft to stall, and I wasn’t convinced the robot would be able to move reliably.</p>
+
+    <p>For sourcing parts in Chennai: Moore Market continues to be the most practical place to find inexpensive salvage. Broken pagers cost about ₹20 if you negotiate. You don’t need a functioning unit—just look for devices with damaged displays and harvest the motors.</p>
+
+    <p>I did lose three motors while trying to remove the counterweight on the shaft. The process is delicate, and it’s easy to damage the motor if you’re impatient. I eventually stopped attempting it since the failure rate outweighed the benefit.</p>
+
+    <p>Many popular solar engine designs use the 1381J regulator, but I never managed to find one locally. Even dismantling older electronics, including a Panasonic cordless phone, didn’t yield that component.</p>
+
+    <p>The red FLED I used came from Apex Electronics in Ritchie Street. The solar cells were all salvaged from old calculators I picked up at Moore Market. I removed the cells, glued them together into a small panel, and wired them in parallel. One Sanyo cell stood out for delivering consistently strong voltage and current in direct sunlight.</p>
+
+    <p>If you’re testing a solar engine, always test outdoors. Indoor lighting—especially tube lights—doesn’t provide enough intensity. When removing solar cells from calculator frames, avoid pulling on the fine connection wires; they’re easy to tear and extremely difficult to repair. Conductive ink is theoretically available in Ritchie Street, but in practice, reliability is hit-or-miss.</p>
+
+    <p>
+        <img border="3" height="384" src="images/SE/se.gif" width="400" />
+    </p>
+
+    <h3>The FLED SE Workings</h3>
+    <p>First, the basics</p>
+    <p>
+    <ol>
+        <li>In a NPN transistor current flows from emitter to collector. For this N(emitter) should be negative, P(base)
+        should be positive and N(collector) should be negative.</li>
+        <li>In a PNP transistor current flows from collector to emitter. For this P(emitter) should be positive,
+        N(base) should be negative and P(collector) should be positive.</li>
+        <li>Certain components like Flashing LED's, LED's etc. let current flow through them only at a particular voltage
+        across their terminals. Let us call these components trigger elements.</li>
+    </ol>
+    </p>
+    <p>The capacitor in a solar engine is essential because a solar cell alone can’t deliver enough instantaneous current to overcome a motor’s starting resistance. Instead, the system stores energy in the capacitor and releases it in short, useful bursts when the motor actually needs it.</p>
+
+    <p>When left unconnected, the capacitor charges from the solar cell until it reaches the lower of the two limits: the solar cell’s maximum output voltage or the capacitor’s rated voltage.</p>
+
+    <p>Let’s assume the motor operates best at around 3 V. That means the solar cell must be capable of generating at least 3 V under good lighting, and the capacitor must be rated to hold a charge above that threshold.</p>
+
+    <p>If the motor were connected directly to the capacitor, the stored energy would be dumped into the motor immediately, preventing any meaningful buildup. This is why the circuit requires a control mechanism—a way to hold the charge until it reaches the level needed for efficient motor operation. The FLED (or LED/diode), the resistor, and the PNP/NPN transistor pair provide this regulation.</p>
+
+    <p>As the capacitor charges from 0 V upward, both the base and emitter of the PNP transistor remain positive (the emitter directly from the capacitor, and the base through the resistor and motor). With base and emitter at similar potentials, the PNP remains off.</p>
+
+    <p>The PNP only turns on when the voltage across the capacitor reaches the trigger voltage of the FLED or diode. At that point, current flows through the trigger element instead of to the PNP’s base, pulling the base negative. This causes the PNP to conduct, allowing current to flow from collector to emitter.</p>
+
+    <p>Meanwhile, the NPN also remains off at first because both its emitter and base are negative relative to ground. For the NPN to conduct, its base must go positive. This happens only once the PNP turns on: the PNP’s conduction raises the NPN’s base potential, enabling current to flow from the capacitor through the NPN to the motor, causing the motor to run.</p>
+
+    <p>Interestingly, the motor keeps spinning even after the capacitor voltage drops below the FLED’s trigger point. Once the motor is in motion, the required torque is lower, so it continues running until the motor’s effective load becomes too high and the capacitor can no longer supply enough current. At that point, the motor stops, the capacitor begins charging again, and the cycle repeats.</p>
+
+    <p>In effect, the “start” point of the motor is governed by the trigger voltage of the FLED/diode, while the “stop” point is set by the motor’s load characteristics. These two independent thresholds give the solar engine behavior similar to a simple silicon-controlled rectifier (SCR), with distinct charge and discharge phases that repeat automatically.</p>
+
+
+    <h3>Solar Engine Types</h3>
+    <p>Solar engines are typically categorized into three main types, based on how they determine when to release stored energy to the motor:</p>
+    <ul>
+    <li>Type 1 – The motor runs when the circuit voltage reaches a defined threshold.</li>
+    <li>Type 2 – The motor runs at fixed time intervals.</li>
+    <li>Type 3 – The motor triggers when the capacitor’s charging rate begins to slow, essentially combining characteristics of Type 1 and Type 2.</li>
+    </ul>
+
+    <p>Most practical solar engines are Type 1, as they offer a straightforward design with good overall efficiency. Type 2 designs can also be efficient and are commonly used in single-neuron solar circuits to generate phototropic (light-seeking) behavior. Type 3 designs are theoretically the most efficient, but they remain largely conceptual and are rarely implemented in practice.</p>
+
+    <p>Beyond using trigger elements like FLEDs, LEDs, or diodes, some solar engines rely on IC-based voltage triggers such as the 1381 series. These components provide more efficient and predictable activation. Solar engines can also be designed to trigger based on timing rather than voltage by using neuron-style circuits, which are useful for systems intended to charge during the day and activate a load at night.</p>
+
+    <p>Below are schematics representing the various solar engine types I’ve encountered. All schematics are the work of their original designers; I’m simply documenting and referencing them here.</p>
+
+    <h3>Solar Engine Designs</h3>
+
+    <!-- NEW CAROUSEL BLOCK AT BOTTOM -->
+    <section class="my-4">
+        <div class="carousel-container">
+            <button
+                type="button"
+                class="carousel-arrow"
+                id="se-prev"
+                aria-label="Previous image">
+                <span class="arrow-icon">‹</span>
+            </button>
+
+            <div class="media-frame">
+                <img id="se-image" alt="Solar engine gallery image" />
+            </div>
+
+            <button
+                type="button"
+                class="carousel-arrow"
+                id="se-next"
+                aria-label="Next image">
+                <span class="arrow-icon">›</span>
+            </button>
+        </div>
+
+        <!-- INDEX ONLY -->
+        <div class="text-center mt-2 small text-muted">
+            <div id="se-index"></div>
+        </div>
+    </section>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const imgEl   = document.getElementById("se-image");
+    const prevBtn = document.getElementById("se-prev");
+    const nextBtn = document.getElementById("se-next");
+    const indexEl = document.getElementById("se-index");
+
+    if (!imgEl || !prevBtn || !nextBtn || !indexEl) return;
+
+    const items = [
+        { src: "images/SE/BEAMd1SE.jpg", label: "BEAMd1SE" },
+        { src: "images/SE/chloro.jpg",   label: "chloro"   },
+        { src: "images/SE/PM1.gif",      label: "PM1"      },
+        { src: "images/SE/se.gif",       label: "se"       },
+        { src: "images/SE/se.htm1.gif",  label: "se.htm1"  },
+        { src: "images/SE/se1.gif",      label: "se1"      },
+        { src: "images/SE/se2.gif",      label: "se2"      },
+        { src: "images/SE/se3.gif",      label: "se3"      },
+        { src: "images/SE/Slr_mtr3.gif", label: "Slr_mtr3" },
+        { src: "images/SE/solar.gif",    label: "solar"    }
+    ];
+
+    let currentIndex = 0;
+
+    function setItem(index) {
+        if (index < 0 || index >= items.length) return;
+        currentIndex = index;
+        const item = items[currentIndex];
+        imgEl.src = item.src;
+        imgEl.alt = item.label || "Solar engine gallery image";
+        indexEl.textContent = (currentIndex + 1) + " / " + items.length;
+    }
+
+    prevBtn.addEventListener("click", function () {
+        const newIndex = (currentIndex - 1 + items.length) % items.length;
+        setItem(newIndex);
+    });
+
+    nextBtn.addEventListener("click", function () {
+        const newIndex = (currentIndex + 1) % items.length;
+        setItem(newIndex);
+    });
+
+    setItem(0);
+});
+</script>
+
+</body>
+</html>

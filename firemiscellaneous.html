@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - FIRE - MISCELLANEOUS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
+        :root { --accent: #20c997; }
+
+        a { color: var(--accent); }
+        .text-accent { color: var(--accent)!important; }
+
+        /* Standard teal headings */
+        .section-heading {
+            font-weight: 350 !important;
+            font-size: 1.2rem !important;
+            color: var(--accent) !important;
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+        }
+    </style>
+
+    <link href="assets/style.css" rel="stylesheet"/>
+    <link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+<link href="assets/fire-subnav.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-white text-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/basicbeam.html">BEAM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/se.html">Solar Engine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tutorials.html">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/links.html">Links</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
+            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav"
+                id="robot-subnav" style="min-width:480px;">
+                <li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
+                <li class="nav-item flex-shrink-0"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
+            </ul>
+        </div>
+
+        <!-- SECTION MENU -->
+        <div class="fire-subnav">
+    <a href="fire.html">Introduction</a> | <a href="firemechanics.html">Mechanics</a> | <a href="firemicrocontroller.html">Microcontroller</a> | <a href="firemotordriver.html">Motordriver</a> | <a href="firesensors.html">Sensors</a> | <a href="firepowersupply.html">Powersupply</a> | <a href="fireckt.html">Schematic</a> | <a href="firemiscellaneous.html" class="active">Miscellaneous</a>
+</div>
+
+        <!-- REFERENCES -->
+        <h3 class="section-heading">References</h3>
+        <ul>
+            <li>THE 8051 MICROCONTROLLER AND EMBEDDED SYSTEMS – Muhammad Ali Mazidi, Janice Gillispie Mazidi</li>
+            <li>The 8051 Microcontroller Architecture, Programming and Applications – Kenneth Ayala</li>
+            <li>Nervous Networks: Processes and Transitions – Wilf Righter  
+                <a href="http://www.solarbotics.net/wilf/NewNvCircuits.htm" target="_blank">http://www.solarbotics.net/wilf/NewNvCircuits.htm</a>
+            </li>
+            <li>HIDER – Bruce Robinson  
+                <a href="http://www3.telus.net/rfws/beam/hider/m_hidr_03.html" target="_blank">http://www3.telus.net/rfws/beam/hider/m_hidr_03.html</a>
+            </li>
+            <li>Brief H-Bridge Theory of Operation – Jim Brown, Dallas Personal Robotics Group  
+                <a href="http://www.dprg.org/tutorials/1998-04a" target="_blank">http://www.dprg.org/tutorials/1998-04a</a>
+            </li>
+            <li>BEAM Yahoo Mailing List</li>
+        </ul>
+
+        <!-- FINAL WORDS -->
+        <h3 class="section-heading">Final words</h3>
+
+        <p>FIRE has many flaws which needs to be fixed:</p>
+
+        <ol>
+            <li>There are no sensors at the back. This has been a major disadvantage considering the size of the robot, and it struggles to get out of room corners.</li>
+            <li>There is no protection for the circuit boards from pointed obstacles.</li>
+            <li>The L298 motor driver is inefficient. I should have used the LMD18298 instead.</li>
+            <li>
+                Five out of six boards were etched at home, which required a significant amount of effort.
+                I had to build the IR board on a general-purpose board because the circuit was too complex.
+                For some reason, I couldn’t bring myself to rely on software tools to design my own PCB layouts,
+                although EAGLE is a solid editor.
+            </li>
+            <li>I should have searched for better motors with shafts aligned to the motor’s axis.</li>
+            <li>
+                The robot needs more functionality. Two sensors are not enough. I’m considering adding sonar sensors
+                and replacing the camera with a low-resolution vision system. I also want to add computer control
+                using FM and DTMF. With these additions, the robot will finally feel complete—sometime in the future.
+            </li>
+        </ol>
+
+        <!-- CREDITS -->
+        <h3 class="section-heading">Credits</h3>
+
+        <p>
+           Thanks to Wilf Righter, Sathe Dilip, Bruce Robinson, Frans Storms, Uditha de Alwis, Domenico Mancini, and everyone on the BEAM mailing list for their input during this project.
+           Also thanks to Arjun and Krishna, my project partners, and to Varoun for lending his digital camera for the photos.
+        </p>
+
+    </main>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
