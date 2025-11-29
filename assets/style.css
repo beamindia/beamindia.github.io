@@ -104,22 +104,23 @@ body {
 .code-box .cmt { color: #888; font-style: italic; }    /* comments */
 
 /* ---- SITE BRAND (BEAMINDIA) ---- */
+/* ---- SITE BRAND (BEAMINDIA) ---- */
 .site-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--accent) !important;   /* teal */
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--accent) !important;   /* teal */
 }
 
 /* ---- SITE BRAND (BEAMINDIA) ---- */
 .navbar .navbar-brand.site-brand {
-    color: var(--accent) !important;
+  color: var(--accent) !important;
 
-    font-size: 1.2rem;      /* minimalist but slightly larger */
-    font-weight: 400;       /* calm, not bold */
-    letter-spacing: 0.2px;  /* subtle refinement */
-    text-transform: none;   /* keeps it modern */
+  font-size: 1.2rem;      /* minimalist but slightly larger */
+  font-weight: 400;       /* calm, not bold */
+  letter-spacing: 0.2px;  /* subtle refinement */
+  text-transform: none;   /* keeps it modern */
 }
 
 /* Underline base (invisible by default) */
