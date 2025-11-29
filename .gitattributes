@@ -1,0 +1,50 @@
+# .gitattributes — treat common binary files as binary to avoid EOL/text conversions
+# This is intentionally conservative and non-invasive: it only disables text conversions
+# for frequently used binary/media formats. It does NOT enable Git LFS or rewrite history.
+
+# Images
+*.png    -text
+*.jpg    -text
+*.jpeg   -text
+*.gif    -text
+*.bmp    -text
+*.tif    -text
+*.tiff   -text
+*.ico    -text
+*.svg    -text
+
+# Video & audio
+*.mp4    -text
+*.mov    -text
+*.avi    -text
+*.mkv    -text
+*.webm   -text
+*.mp3    -text
+*.wav    -text
+
+# Documents
+*.pdf    -text
+*.doc    -text
+*.docx   -text
+*.xls    -text
+*.xlsx   -text
+*.ppt    -text
+*.pptx   -text
+*.odt    -text
+
+# Archives & binaries
+*.zip    -text
+*.tar    -text
+*.gz     -text
+*.7z     -text
+*.rar    -text
+*.exe    -text
+*.bin    -text
+*.iso    -text
+
+# Other large or binary assets
+*.psd    -text
+*.ai     -text
+*.eps    -text
+
+# Ensure HTML/JS/CSS remain text (leave defaults)

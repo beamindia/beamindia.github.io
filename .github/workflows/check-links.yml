@@ -1,0 +1,29 @@
+name: Link check
+
+on:
+  pull_request:
+    paths:
+      - 'beamindia/**'
+      - 'scripts/check_links.py'
+  push:
+    branches: [ 'main' ]
+    paths:
+      - 'beamindia/**'
+      - 'scripts/check_links.py'
+
+jobs:
+  link-check:
+    name: Run link checker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run link-check script
+        run: |
+          python scripts/check_links.py
