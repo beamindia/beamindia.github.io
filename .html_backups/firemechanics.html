@@ -1,11 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BEAMINDIA - MY ROBOTS - FIRE - MECHANICS</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BEAMINDIA - MY ROBOTS - FIRE - MECHANICS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <style>
         :root { --accent: #20c997; }
         a { color: var(--accent); }
         .text-accent { color: var(--accent)!important; }
@@ -20,38 +23,46 @@
             margin-bottom: .5rem;
         }
     </style>
-<link href="assets/style.css" rel="stylesheet">
-<link href="assets/navbar.css" rel="stylesheet">
-<link href="assets/robot-nav.css" rel="stylesheet">
-<link href="assets/fire-subnav.css" rel="stylesheet">
-</head>
-<body class="bg-white text-dark">
+
+    <link href="assets/style.css" rel="stylesheet" />
+    <link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
+    <link href="assets/fire-subnav.css" rel="stylesheet"/>
+    </head>
+    <body class="bg-white text-dark">
 
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"><div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
             <a class="navbar-brand site-brand" href="/">BEAMINDIA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/">Robots</a></li>
                     <li class="nav-item"><a class="nav-link" href="/basicbeam.html">BEAM</a></li>
                     <li class="nav-item"><a class="nav-link" href="/se.html">Solar Engine</a></li>
                     <li class="nav-item"><a class="nav-link" href="/tutorials.html">Tutorials</a></li>
                     <li class="nav-item"><a class="nav-link" href="/links.html">Links</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
                 </ul>
-</div>
+            </div>
         </div>
-    </nav><main class="container my-5"><!-- ROBOT SUBNAV --><div class="nav-wrapper overflow-auto">
-            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav" id="robot-subnav" style="min-width: 480px;">
-<li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- ROBOT SUBNAV -->
+        <div class="nav-wrapper overflow-auto">
+            <ul class="nav nav-tabs flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3 robot-nav"
+                id="robot-subnav" style="min-width: 480px;">
+                <li class="nav-item flex-shrink-0"><a class="nav-link active" href="fire.html#Fire">Fire</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="moby.html#Moby">Moby</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="twalky.html#Twalky">Twalky</a></li>
                 <li class="nav-item flex-shrink-0"><a class="nav-link" href="scamvee.html#Scamvee">Scamvee</a></li>
                 </ul>
-</div>
+        </div>
 
         <!-- SECTION MENU -->
         <div class="fire-subnav">
@@ -59,11 +70,12 @@
         </div>
 
         <!-- CONTENT -->
-        <section class="py-4"><div class="container">
+        <section class="py-4">
+        <div class="container">
             <!-- DESIGN GOALS -->
             <h3 class="section-heading">Design goals</h3>
             <ul>
-<li>Simple construction</li>
+                <li>Simple construction</li>
                 <li>Compact and lightweight</li>
                 <li>Cost-effective</li>
                 <li>Easy to reconfigure</li>
@@ -71,10 +83,12 @@
                 <li>Space to add more sensors</li>
                 <li>Enough mounting area for electronics</li>
             </ul>
-<!-- MAIN BODY STRUCTURE --><h3 class="section-heading">Main body structure</h3>
+
+            <!-- MAIN BODY STRUCTURE -->
+            <h3 class="section-heading">Main body structure</h3>
             <p>The robot is built around a sturdy aluminium frame. The primary components are:</p>
             <ul>
-<li>Aluminium chassis</li>
+                <li>Aluminium chassis</li>
                 <li>Cast-steel motor clamps</li>
                 <li>High-torque motors</li>
                 <li>Custom-machined nylon wheels</li>
@@ -83,7 +97,9 @@
                 <li>Mounting points for circuit boards</li>
                 <li>A dedicated mount for a surveillance camera</li>
             </ul>
-<!-- FRAME --><h3 class="section-heading">Frame</h3>
+
+            <!-- FRAME -->
+            <h3 class="section-heading">Frame</h3>
             <p>
                 The frame turned out to be the trickiest part of the entire build. It’s made from two long aluminium
                 bars—the same type used for sliding windows and doors. Holes were drilled along them to mount the motors,
@@ -94,11 +110,13 @@
                 The frame is divided into three functional sections:
             </p>
             <ul>
-<li>Front: camera head and obstacle sensors</li>
+                <li>Front: camera head and obstacle sensors</li>
                 <li>Middle: motor clamps and circuit board stack</li>
                 <li>Rear: battery bay and support wheel</li>
             </ul>
-<!-- BATTERY BAY --><h3 class="section-heading">Battery bay</h3>
+
+            <!-- BATTERY BAY -->
+            <h3 class="section-heading">Battery bay</h3>
             <p>
                 The robot uses two 6V, 4.5Ah sealed lead-acid batteries. Since they sit at the rear of the frame,
                 a universal support wheel was added to reduce friction and prevent the tail from dragging.
@@ -106,14 +124,16 @@
             </p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE12.JPG" alt="Battery bay" width="400" height="211" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE12.JPG" alt="Battery bay" width="400" height="211" border="0"/>
+            </p>
 
             <p>
                 The battery tray is a simple rectangular metal plate with holes drilled for bolts and the support wheel.
             </p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE17.JPG" alt="Battery bay plate" width="273" height="339" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE17.JPG" alt="Battery bay plate" width="273" height="339" border="0"/>
+            </p>
             <p>(Battery Bay)</p>
 
             <!-- MOTOR & CLAMP -->
@@ -146,7 +166,8 @@
             </p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE09.JPG" alt="INRAD Motors" width="400" height="275" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE09.JPG" alt="INRAD Motors" width="400" height="275" border="0"/>
+            </p>
 
             <p>(INRAD 12 V, tri-speed wiper motors)</p>
 
@@ -157,7 +178,8 @@
             </p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE10.JPG" alt="Motor clamp" width="400" height="156" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE10.JPG" alt="Motor clamp" width="400" height="156" border="0"/>
+            </p>
 
             <p>(Motor clamp resting on a small reddish-brown box. The clamps are at an angle to each other, not visible in this image)</p>
 
@@ -177,7 +199,8 @@
             </p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE11.JPG" alt="Nylon wheels" width="491" height="243" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE11.JPG" alt="Nylon wheels" width="491" height="243" border="0"/>
+            </p>
             <p>(Nylon wheels)</p>
 
             <p>
@@ -193,7 +216,7 @@
             <!-- CIRCUIT BOARD MOUNTS -->
             <h3 class="section-heading">Circuit board mounts</h3>
             <p>
-                The circuit boards are stacked one above the other in the middle part of the robot using long 8" bolts.
+                The circuit boards are stacked one above the other in the middle part of the robot using long 8&quot; bolts.
             </p>
 
             <!-- SURVEILLANCE CAMERA MOUNT -->
@@ -211,27 +234,39 @@
             </p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE14.JPG" alt="IR bay" width="400" height="209" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE14.JPG" alt="IR bay" width="400" height="209" border="0"/>
+            </p>
 
             <!-- IMAGES -->
             <h3 class="section-heading">Images</h3>
             <p>
-                <img src="images/FIRE/Mechanics/FIRE16.JPG" alt="Motor, wheel and clamp assembly" width="400" height="289" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE16.JPG" alt="Motor, wheel and clamp assembly" width="400" height="289" border="0"/>
+            </p>
 
             <p>(Motor + wheel + clamp)</p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE18.JPG" alt="Frame with motors, wheels and clamp" width="400" height="309" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE18.JPG" alt="Frame with motors, wheels and clamp" width="400" height="309" border="0"/>
+            </p>
 
             <p>(Frame + motor + wheel + clamp)</p>
 
             <p>
-                <img src="images/FIRE/Mechanics/FIRE23.JPG" alt="Frame with motors, battery bay and camera head" width="475" height="278" border="0"></p>
+                <img src="images/FIRE/Mechanics/FIRE23.JPG" alt="Frame with motors, battery bay and camera head" width="475" height="278" border="0"/>
+            </p>
 
             <p>(The frame with motors, battery bay and camera head mounted.)</p>
 
         </div>
-        </section></main><footer class="bg-white text-center py-4 mt-5 small text-muted border-top"><p>© Viswas Nair TK</p>
-    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        </section>
+
+    </main>
+
+    <footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+        <p>© Viswas Nair TK</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

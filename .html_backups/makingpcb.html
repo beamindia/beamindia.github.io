@@ -1,10 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>BEAMINDIA - Tutorials - Making a PCB</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/favicon.ico" rel="icon" type="image/x-icon">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
+
 <style>
 :root { --accent: #20c997; }
 
@@ -32,14 +35,17 @@ a {
   margin-bottom: 1rem;
 }
 </style>
-<link href="assets/style.css" rel="stylesheet">
-<link href="assets/navbar.css" rel="stylesheet">
-<link href="assets/robot-nav.css" rel="stylesheet">
+
+<link href="assets/style.css" rel="stylesheet"/>
+<link href="assets/navbar.css" rel="stylesheet"/>
+<link href="assets/robot-nav.css" rel="stylesheet"/>
 </head>
+
 <body class="bg-white text-dark">
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"><div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
     <a class="navbar-brand site-brand" href="index.html">BEAMINDIA</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -48,18 +54,24 @@ a {
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link" href="index.html">Robots</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Robots</a></li>
         <li class="nav-item"><a class="nav-link" href="basicbeam.html">BEAM</a></li>
         <li class="nav-item"><a class="nav-link" href="se.html">Solar Engine</a></li>
         <li class="nav-item"><a class="nav-link active" href="tutorials.html">Tutorials</a></li>
         <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
       </ul>
-</div>
+    </div>
   </div>
-</nav><main class="container my-5"><!-- TUTORIAL SUBNAV (robot-nav style) --><div class="nav-wrapper overflow-auto">
-    <ul class="nav nav-tabs robot-nav flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3" id="tutorial-subnav" style="min-width: 480px;">
-<li class="nav-item flex-shrink-0">
+</nav>
+
+<main class="container my-5">
+
+  <!-- TUTORIAL SUBNAV (robot-nav style) -->
+  <div class="nav-wrapper overflow-auto">
+    <ul class="nav nav-tabs robot-nav flex-nowrap justify-content-start justify-content-lg-center gap-2 my-3"
+        id="tutorial-subnav" style="min-width: 480px;">
+      <li class="nav-item flex-shrink-0">
         <a class="nav-link" href="servohack.html">Servo Hack</a>
       </li>
       <li class="nav-item flex-shrink-0">
@@ -69,10 +81,11 @@ a {
         <a class="nav-link active" href="makingpcb.html">Making PCB</a>
       </li>
     </ul>
-</div>
+  </div>
 
   <!-- CONTENT -->
-  <section class="row justify-content-center"><div class="col-lg-8">
+  <section class="row justify-content-center">
+    <div class="col-lg-8">
       <p>
         Printed circuit boards (PCBs) are a convenient way to build robust, compact circuits for small robots.
         A PCB can even double as part of the robot’s structure. Fabricating a simple board at home takes some
@@ -83,7 +96,7 @@ a {
 
       <h3 class="h5 mt-4 mb-2 text-accent">Tools and materials</h3>
       <ol>
-<li>A phenolic laminate board (copper-clad)</li>
+        <li>A phenolic laminate board (copper-clad)</li>
         <li>Ferric chloride (powder, for etching)</li>
         <li>Enamel paint, alcohol-based marker, or nail polish (for masking)</li>
         <li>A set of fine brushes (sizes 0–3), if using paint</li>
@@ -92,9 +105,10 @@ a {
         <li>Varnish for final protection</li>
         <li>Steel wool for surface preparation</li>
       </ol>
-<h3 class="h5 mt-4 mb-2 text-accent">Procedure</h3>
+
+      <h3 class="h5 mt-4 mb-2 text-accent">Procedure</h3>
       <ol>
-<li>
+        <li>
           Prepare the board - 
           Clean the copper surface thoroughly using petrol, spirit, or acetone to remove grease and oxidation.
           A brief polish with steel wool helps achieve a uniform, bright surface.
@@ -121,7 +135,7 @@ a {
         </li>
         <li>
           Prepare the etchant - 
-          Fill a non-metallic tray with hot water (around 80–85 °C). Dissolve approximately 30–50 g of
+          Fill a non-metallic tray with hot water (around 80–85&nbsp;°C). Dissolve approximately 30–50&nbsp;g of
           ferric chloride powder, stirring until fully mixed.
         </li>
         <li>
@@ -137,7 +151,7 @@ a {
         </li>
         <li>
           Drill component holes - 
-          Drill the remaining component and mounting holes using suitable bit sizes (typically 1–1.5 mm for
+          Drill the remaining component and mounting holes using suitable bit sizes (typically 1–1.5&nbsp;mm for
           component leads). Clean up any rough edges around the holes.
         </li>
         <li>
@@ -150,9 +164,10 @@ a {
           exposed copper areas to help reduce oxidation over time.
         </li>
       </ol>
-<h3 class="h5 mt-4 mb-2 text-accent">Safety and handling</h3>
+
+      <h3 class="h5 mt-4 mb-2 text-accent">Safety and handling</h3>
       <ol>
-<li>
+        <li>
           Etchant safety - 
           Ferric chloride is corrosive and can stain or damage many surfaces. Store it in a clearly labeled,
           airtight container and avoid skin and eye contact.
@@ -168,9 +183,16 @@ a {
           protection when drilling.
         </li>
       </ol>
-</div>
-  </section></main><footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-white text-center py-4 mt-5 small text-muted border-top">
 © Viswas Nair TK
-</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
