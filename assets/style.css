@@ -465,3 +465,38 @@ body {
   color: #222;
   transition: color 0.25s ease;
 }
+
+/* === FIX MOBILE NAV UNDERLINE EXTENDING FULL-WIDTH === */
+
+/* In mobile/collapsed view, force inline-block so underline hugs text */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+    display: inline-block !important;
+    width: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Ensure underline stays under text only */
+  .navbar-nav .nav-link::after {
+    left: 0 !important;
+    transform: none !important;   /* no centering */
+  }
+}
+
+/* === MOBILE NAV: SIMPLE TEXT UNDERLINE, NO PSEUDO-ELEMENT === */
+@media (max-width: 992px) {
+  /* Kill the animated ::after underline in the collapsed menu */
+  .navbar-nav .nav-link::after {
+    content: none !important;
+  }
+
+  /* Use a clean text underline just under the label */
+  .navbar-nav .nav-link.active {
+    position: static !important;
+    text-decoration: underline;
+    text-decoration-color: var(--accent, #1aa6b7);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+}
