@@ -527,3 +527,22 @@ body {
     color: rgba(33, 37, 41, 0.65); /* softer color = less "heavy" */
   }
 }
+
+/* --- HERO TAGLINE (consistent across devices) --- */
+.hero-tagline {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: rgba(33, 37, 41, 0.8);
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Make it even lighter on iPhone */
+@media (max-width: 768px) {
+  .hero-tagline {
+    font-weight: 300;               /* iOS ignores 200 anyway */
+    color: rgba(33, 37, 41, 0.7);   /* softer = visually lighter */
+    font-size: 1rem;
+  }
+}
