@@ -500,3 +500,19 @@ body {
     text-underline-offset: 4px;
   }
 }
+
+
+/* Hero tagline weight fix */
+#hero-text-only .lead {
+  font-weight: 300;              /* lighter than default */
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make it extra-light on smaller screens (Safari on phone) */
+@media (max-width: 768px) {
+  #hero-text-only .lead {
+    font-weight: 200;
+  }
+}
