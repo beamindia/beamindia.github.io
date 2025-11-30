@@ -510,9 +510,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Make it extra-light on smaller screens (Safari on phone) */
+/* Hero tagline refinement */
+#hero-text-only .lead {
+  font-weight: 300;
+  font-size: 1.15rem;
+  color: rgba(33, 37, 41, 0.8); /* slightly softer than full black */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* On smaller screens, make it visually lighter */
 @media (max-width: 768px) {
   #hero-text-only .lead {
-    font-weight: 200;
+    font-weight: 300;              /* force lightest available weight */
+    font-size: 1.05rem;            /* a bit smaller = feels lighter */
+    color: rgba(33, 37, 41, 0.65); /* softer color = less "heavy" */
   }
 }
