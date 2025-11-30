@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://beamindia.github.io/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://beamindia.github.io/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url><loc>https://beamindia.github.io/about.html</loc></url>
+  <url><loc>https://beamindia.github.io/basicbeam.html</loc></url>
+
+  <!-- Robots -->
+  <url><loc>https://beamindia.github.io/moby.html</loc></url>
+  <url><loc>https://beamindia.github.io/twalky.html</loc></url>
+  <url><loc>https://beamindia.github.io/fire.html</loc></url>
+  <url><loc>https://beamindia.github.io/scamvee.html</loc></url>
+
+  <!-- Fire subpages -->
+  <url><loc>https://beamindia.github.io/fireckt.html</loc></url>
+  <url><loc>https://beamindia.github.io/firemechanics.html</loc></url>
+  <url><loc>https://beamindia.github.io/firemicrocontroller.html</loc></url>
+  <url><loc>https://beamindia.github.io/firemotordriver.html</loc></url>
+  <url><loc>https://beamindia.github.io/firepowersupply.html</loc></url>
+  <url><loc>https://beamindia.github.io/firesensors.html</loc></url>
+  <url><loc>https://beamindia.github.io/firemiscellaneous.html</loc></url>
+
+  <!-- Others -->
+  <url><loc>https://beamindia.github.io/tutorials.html</loc></url>
+  <url><loc>https://beamindia.github.io/links.html</loc></url>
+  <url><loc>https://beamindia.github.io/makingpcb.html</loc></url>
+  <url><loc>https://beamindia.github.io/se.html</loc></url>
+  <url><loc>https://beamindia.github.io/servohack.html</loc></url>
+
+</urlset>
